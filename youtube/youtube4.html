@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        header {
+            width: 100%;
+            margin: auto;
+            height: 70px;
+            background: white;
+            position: fixed;
+
+        }
+
+        nav {
+            width: 75%;
+            height: 60px;
+            left: 58%;
+            transform: translateX(-50%);
+            position: fixed;
+            top: 80px;
+            z-index: 9999;
+        }
+
+        nav .menu {
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            position: absolute;
+            left: 40px;
+            bottom: 10px;
+            margin: 0;
+            z-index: -1;
+
+        }
+
+        nav .menu li {
+            font-size: 5px;
+            display: inline-block;
+            padding: 0.5rem 0.5rem;
+            border-radius: 30%;
+
+        }
+
+        nav .menu li a {
+            text-decoration: none;
+            display: block;
+            font-size: 12px;
+            padding: .5rem 1.5rem;
+            border: 1px solid gray;
+            border-radius: 20px/20px;
+
+        }
+
+        /*main 
+            float: right;
+            width: 1400px;
+            height: 1300px;
+            margin: 30px;
+            background: gray;
+            border: 1px solid red;
+
+        }*/
+
+        aside {
+            width: 220px;
+            height: 1800px;
+            margin: 0px;
+            background: white;
+            position: relative;
+            overflow: auto;
+            left: 0px;
+            top: -300px;
+
+
+
+        }
+
+
+        .one {
+            width: 150px;
+            height: 15%;
+
+        }
+
+        .container2 {
+            width: 200px;
+            color: black;
+            margin: auto;
+            border: 2px solid white;
+            text-align: left;
+
+        }
+
+        .youtubefix {
+            width: 200px;
+            height: 5000px;
+            color: black;
+            margin: auto;
+            position: fixed;
+            margin: 0 auto;
+            top: 0px;
+            left: 0px;
+            font-size: 1rem;
+            padding: 1rem 0;
+
+
+
+
+        }
+
+        .col2 {
+            color: blue;
+            width: 160px;
+            margin: auto;
+            border: 2px solid blue;
+        }
+
+        .colhea {
+            color: blue;
+            width: 160px;
+            margin: auto;
+            border: 2px solid blue;
+            float: right;
+        }
+
+
+        .picture1 {
+            width: 35px;
+            height: 35px;
+            top: 10px;
+            right: 0;
+            float: left;
+            margin: 0px 20px;
+
+
+
+        }
+
+        .picture2 {
+            width: 220px;
+            height: 25px;
+            position: absolute;
+            top: -30px;
+            right: 0;
+            left: 10px;
+
+
+        }
+
+        .txt {
+            vertical-align: middle
+        }
+
+
+        .spa {
+            background: rgb(250, 248, 248);
+            font-size: 25px;
+            border-radius: 25%;
+            border: 2px solid rgb(226, 221, 221);
+            display: inline-block;
+
+
+        }
+
+        .container {
+            width: 1600px;
+            color: black;
+            background: white;
+            margin: auto;
+            overflow: auto;
+            float: right;
+
+
+
+        }
+
+        .container3 {
+            width: 1480px;
+            height: 300px;
+            color: white;
+            background: white;
+            margin: auto;
+            overflow: auto;
+            display: inline-block;
+
+
+        }
+
+        .col {
+            width: 380px;
+            margin: 2px;
+            padding: 2px;
+            float: left;
+            font-size: 14px;
+
+
+
+        }
+
+        .img2 {
+            width: 45px;
+            margin-top: 2px;
+            padding: 2px;
+            border-radius: 50%;
+
+            float: left;
+
+        }
+
+        img {
+            width: 100%
+        }
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .img3 {
+            width: 250px;
+            height: 40px;
+            position: absolute;
+            color: white;
+            left: 400px;
+            top: 130px;
+            display: inline-block;
+        }
+
+        .text2 {
+            width: 480px;
+            color: #000;
+            font-size: 25px;
+            position: absolute;
+            top: 160px;
+            left: 420px;
+            text-align: left;
+        }
+
+        .col3 {
+            color: blue;
+            width: 140px;
+            margin: auto;
+            border: 2px solid blue;
+            display: inline-block;
+            position: absolute;
+            left: 400px;
+            top: 250px;
+        }
+
+        form input,
+        form button {
+            padding: 0.2rem 0.5rem;
+            font-size: 1.5rem;
+            margin: 0.1rem;
+            display: inline-block;
+            position: absolute;
+            top: 20px;
+            right: 600px;
+        }
+
+        #fixed_block {
+            position: fixed;
+            top: 0px;
+            background-color: #ff0000;
+        }
+
+        .img4 {
+            width: 350px;
+            height: 200px;
+        }
+
+        .icon2 {
+            width: 50px;
+            height: 50px;
+            top: 30px;
+            right: 0;
+            left: 10px;
+            float: right;
+
+        }
+
+
+
+        .icon3 {
+            width: 50px;
+            height: 50px;
+            top: 20px;
+            position: absolute;
+            left: 1330px;
+            background: white;
+
+
+        }
+
+
+        .icon4 {
+            width: 35px;
+            height: 35px;
+            top: 150px;
+            left: 1500px;
+            position: absolute;
+
+        }
+
+        #icon {
+            background-image: url(./image/icons8-search-50.png);
+            background-repeat: no-repeat;
+            background-position: 7px 4px;
+            width: 55px;
+            height: 40px;
+            background-size: 30px 30px;
+        }
+
+        .text5 {
+            text-align: center;
+            position: relative;
+            top: 10px;
+
+
+
+        }
+    </style>
+</head>
+<header>
+
+    <div class="colhea">
+        <p><img class="picture1" src="image/login.png" style="vertical-align:middle;" aria-hidden="true">登入
+        </p>
+    </div>
+
+
+
+
+    <form>
+        <input type="search" name="keyword" size="50">
+        <input type="submit" id="icon" value="       ">
+    </form>
+    <div> <img class="icon3" src="image/login.png">
+
+    </div>
+
+
+    <img class="icon2" src="image/login.png">
+    <img class="icon2" src="image/login.png">
+</header>
+<hr>
+<nav>
+    <ul class="menu">
+        <li><a>全部</a></li>
+        <li><a>手工藝</a></li>
+        <li><a>動畫</a></li>
+        <li><a>直播中</a></li>
+        <li><a>烹飪節目</a></li>
+        <li><a>音樂</a></li>
+        <li><a>旅遊勝地</a></li>
+        <li><a>美容訣竅</a></li>
+        <li><a>饒舌</a></li>
+        <li><a>最新上傳</a></li>
+    </ul>
+</nav>
+
+
+
+<body>
+
+    <main>
+
+
+
+        <div class="container3">
+            <img class="icon4" src="/image/xx.png">
+
+            <img class="img3"
+                src=" https://www.gstatic.com/youtube/img/promos/growth/864dc47e45a7a0b06602f73155980de282b939a6d0adc7bdcda231f965bf796a_640x48.png">
+
+
+            <p class="text2">只需支付一筆費用，一個家庭就能享<br>有 6 個帳戶。</p>
+            <div class="col3">
+                <p> 立即訂閱
+                </p>
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="col">
+                <img class="img4"
+                    src="https://i.ytimg.com/vi/J2Zzu2C3C3E/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCfWdEx48mUZzL36OQeySnJd4wFTg">
+
+                <img class="img2" src="./image/y2.jpg">
+
+                <p class="videoTitle">50首突破百萬的洗腦神曲你一定有<br>
+                    聽過多想留在你身邊(少年，你的...</p>
+                <p>
+                    甜美的旋律 Sweet Melody<br>
+                    觀看次數:60萬次。六個月前</p>
+            </div>
+            <div class="col">
+                <img class="img4"
+                    src="https://i.ytimg.com/vi/wFQr8MvV-NQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDwnNii0C9AVjf2tgyX7sVhKJW9tg">
+                <img src="/image/y3.jpg" class="img2">
+                <p class="videoTitle">英雄神秘客EP25-台南網咖住宿<BR>
+                    飲料無限暢飲食物隨時有</p>
+                <p>
+                    英雄日常H<br>
+                    觀看次數:68萬次。2個月前</p>
+            </div>
+            <div class="col">
+                <img class="img4"
+                    src="https://i.ytimg.com/vi/VetfVnBN7MA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD6RvafJeiZCSXQ9UFxdQiW6DjL5Q">
+                <img src="/image/y4.jpg" class="img2">
+                <p class="videoTitle">G.E.M.鄧紫棋【平行世界 Parallel】MV （電影《刺殺小說家》主題曲)
+                </p>
+                <p>
+                    GEM鄧紫棋<br>
+                    觀看次數:389萬次。1周前</p>
+            </div>
+            <div class="col">
+                <img class="img4"
+                    src="https://i.ytimg.com/vi/GMi_is1eMcw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCc8vVs65qt_QXYBRl6hwju6pYJgA">
+                <img src="/image/y5.jpg" class="img2">
+                <p class="videoTitle">重看復仇者聯盟4終局之戰微細節分析！鋼鐵人交換手套掉碎片</p>
+                <p>
+                    TEEPR 叭啦叭啦研究室<br>
+                    觀看次數:68萬次。2個月前</p>
+            </div>
+            <div class="col">
+                <img class="img4"
+                    src="https://i.ytimg.com/vi/4uP_bTQWGCU/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCnBC2s4H2z0nQuV8UiMQqN1n9CaA">
+                <img src="/image/y1.jpg" class="img2">
+                <p class="videoTitle">精選│菲小老弟翻臉？！美碎「一帶一路」大業 中資千億合約急喊卡【關鍵時刻】-劉寶傑 </p>
+                <p>
+                    關鍵時刻<br>
+                    觀看次數:34萬次。1周前</p>
+            </div>
+            <div class="col">
+                <img class="img4"
+                    src="https://i.ytimg.com/vi/GMi_is1eMcw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCc8vVs65qt_QXYBRl6hwju6pYJgA">
+                <img src="/image/y2.jpg" class="img2">
+                <p class="videoTitle">「無廣告版」森林系音樂& 鋼琴吉他和大自然音律 ☕ 最放鬆讀書＆工作音樂 RELAX </p>
+                <p>
+                    Music For studying<br>
+                    觀看次數:42萬次。5個月前</p>
+            </div>
+            <div class="col">
+                <img class="img4"
+                    src="https://i.ytimg.com/vi/GMi_is1eMcw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCc8vVs65qt_QXYBRl6hwju6pYJgA">
+                <img src="/image/y3.jpg" class="img2">
+                <p class="videoTitle">不要再取奇怪的餐點名稱了｜#吹你腦｜喬瑟夫 ChillSeph</p>
+                <p>
+                    喬瑟夫 chillSeph<br>
+                    觀看次數:514萬次。2個月前</p>
+            </div>
+            <div class="col">
+                <img class="img4"
+                    src="https://i.ytimg.com/vi/4uP_bTQWGCU/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCnBC2s4H2z0nQuV8UiMQqN1n9CaA">
+                <img src="/image/y1.jpg" class="img2">
+                <p class="videoTitle">瘋神無雙 官方正版【瘋神歌舞團-----鬼滅之刃完整版】
+                </p>
+                <p>
+                    瘋神無雙<br>
+                    觀看次數：48萬次 9個月前</p>
+            </div>
+
+
+
+            <div class="col">
+                <img class="img4"
+                    src="https://i.ytimg.com/vi/GMi_is1eMcw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCc8vVs65qt_QXYBRl6hwju6pYJgA">
+                <img src="/image/y5.jpg" class="img2">
+                <p class="videoTitle">不要再取奇怪的餐點名稱了｜#吹你腦｜喬瑟夫 ChillSeph</p>
+                <p>
+                    喬瑟夫 chillSeph<br>
+                    觀看次數:514萬次。2個月前</p>
+            </div>
+
+            <div class="col">
+                <img class="img4"
+                    src="https://i.ytimg.com/vi/GMi_is1eMcw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCc8vVs65qt_QXYBRl6hwju6pYJgA">
+                <img src="/image/y5.jpg" class="img2">
+                <p class="videoTitle">不要再取奇怪的餐點名稱了｜#吹你腦｜喬瑟夫 ChillSeph</p>
+                <p>
+                    喬瑟夫 chillSeph<br>
+                    觀看次數:514萬次。2個月前</p>
+            </div>
+
+            <div class="col">
+                <img class="img4"
+                    src="https://i.ytimg.com/vi/GMi_is1eMcw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCc8vVs65qt_QXYBRl6hwju6pYJgA">
+                <img src="/image/y5.jpg" class="img2">
+                <p class="videoTitle">不要再取奇怪的餐點名稱了｜#吹你腦｜喬瑟夫 ChillSeph</p>
+                <p>
+                    喬瑟夫 chillSeph<br>
+                    觀看次數:514萬次。2個月前</p>
+            </div>
+
+            <div class="col">
+                <img class="img4"
+                    src="https://i.ytimg.com/vi/GMi_is1eMcw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCc8vVs65qt_QXYBRl6hwju6pYJgA">
+                <img src="/image/y5.jpg" class="img2">
+                <p class="videoTitle">不要再取奇怪的餐點名稱了｜#吹你腦｜喬瑟夫 ChillSeph</p>
+                <p>
+                    喬瑟夫 chillSeph<br>
+                    觀看次數:514萬次。2個月前</p>
+            </div>
+
+
+
+
+
+        </div>
+    </main>
+    <aside>
+
+        <div class="youtubefix">
+            <div class="picture2">
+                <img src=https://img.appledaily.com.tw/images/ReNews/20170830/640_043298849bca88157f68463190356782.jpg
+                    aria-hidden="true">
+            </div>
+
+        </div>
+
+        <br>
+
+        <div class="container2">
+            <p><img class="picture1" src="image/login.png">首頁
+            </p>
+        </div>
+
+        <div class="container2">
+            <p><img class="picture1" src="image/login.png">首頁
+            </p>
+        </div>
+
+
+
+
+        <div class="container2">
+            <p><img class="picture1" src="image/login.png">探索
+            </p>
+        </div>
+
+        <div class="container2">
+            <p><img class="picture1" src="image/login.png">訂閱內容
+            </p>
+        </div>
+        <hr>
+
+        <div class="container2">
+            <p><img class="picture1" src="image/login.png">媒體庫
+            </p>
+        </div>
+
+
+        <div class="container2">
+            <p><img class="picture1" src="image/login.png" style="vertical-align:middle;" aria-hidden="true">觀看紀錄
+            </p>
+        </div>
+        <hr>
+        <br>
+        <p>登入帳戶即可對影片表示喜歡、發布留言及訂閱頻道。</p>
+        <div class="col2">
+            <p><img class="picture1" src="image/login.png" style="vertical-align:middle;" aria-hidden="true">登入
+            </p>
+        </div>
+        <hr>
+        <br>
+        <P>YOUTUBE精選</P>
+        <div class="container2">
+            <p><img class="picture1" src="image/login.png" style="vertical-align:middle;" aria-hidden="true">音樂
+            </p>
+        </div>
+        <hr>
+        <div class="container2">
+            <p><img class="picture1" src="image/login.png" style="vertical-align:middle;" aria-hidden="true">體育
+            </p>
+        </div>
+        <hr>
+        <div class="container2">
+            <p><img class="picture1" src="image/login.png" style="vertical-align:middle;" aria-hidden="true">遊戲
+            </p>
+        </div>
+        <hr>
+        <div class="container2">
+            <p><img class="picture1" src="image/login.png" style="vertical-align:middle;" aria-hidden="true">電影
+            </p>
+        </div>
+        <hr>
+        <div class="container2">
+            <p><img class="picture1" src="image/login.png" style="vertical-align:middle;" aria-hidden="true">新聞
+            </p>
+        </div>
+        <hr>
+        <div class="container2">
+            <p><img class="picture1" src="image/login.png" style="vertical-align:middle;" aria-hidden="true">直播
+            </p>
+        </div>
+        <hr>
+        <div class="container2">
+            <p><img class="picture1" src="image/login.png" style="vertical-align:middle;" aria-hidden="true">360度影片
+            </p>
+        </div>
+        <hr>
+        <br>
+        <div class="container2">
+            <p><img class="picture1" src="image/login.png" style="vertical-align:middle;" aria-hidden="true">瀏覽頻道
+            </p>
+            <hr>
+            <br>
+            <div class="container2">
+                <p>更多YOUBE功能
+                </p>
+            </div>
+
+            <div class="container2">
+                <p><img class="picture1" src="image/login.png" style="vertical-align:middle;" aria-hidden="true">YouTube
+                    Premium
+                </p>
+            </div>
+            <hr>
+            <div class="container2">
+                <p><img class="picture1" src="image/login.png" style="vertical-align:middle;" aria-hidden="true">直播
+                </p>
+            </div>
+            <hr>
+            <div class="container2">
+                <p><img class="picture1" src="image/login.png" style="vertical-align:middle;" aria-hidden="true">設定
+                </p>
+            </div>
+            <hr>
+            <div class="container2">
+                <p><img class="picture1" src="image/login.png" style="vertical-align:middle;" aria-hidden="true">檢舉紀錄
+                </p>
+            </div>
+            <hr>
+            <div class="container2">
+                <p><img class="picture1" src="image/login.png" style="vertical-align:middle;" aria-hidden="true">說明
+                </p>
+            </div>
+            <hr>
+            <div class="container2">
+                <p><img class="picture1" src="image/login.png" style="vertical-align:middle;" aria-hidden="true">提供意見
+                </p>
+            </div>
+
+            <div class="container2">
+                <p><img class="picture1" src="image/login.png" style="vertical-align:middle;" aria-hidden="true">提供意見
+                </p>
+            </div>
+
+
+
+            <div class="container2">
+                <p><img class="picture1" src="image/login.png" style="vertical-align:middle;" aria-hidden="true">提供意見
+                </p>
+            </div>
+
+
+
+            <div class="container2">
+                <p><img class="picture1" src="image/login.png" style="vertical-align:middle;" aria-hidden="true">提供意見
+                </p>
+            </div>
+
+
+            <div class="container2">
+                <p><img class="picture1" src="image/login.png" style="vertical-align:middle;" aria-hidden="true">提供意見
+                </p>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+        </div>
+        </div>
+
+
+
+
+
+
+    </aside>
+
+</body>
+
+</html>
